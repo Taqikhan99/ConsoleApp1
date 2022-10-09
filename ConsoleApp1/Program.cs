@@ -10,8 +10,23 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            int a = 5;
-            Console.WriteLine(a);
+            int a = 0;
+
+            Console.WriteLine("Please Enter a number: ");
+            try
+            {
+                a = Convert.ToInt32(Console.ReadLine());
+                for (int i = 1; i <= 10; i++)
+                {
+                    Console.WriteLine(a+" * "+i+" = "+a*i);
+                }
+            }
+            catch
+            {
+                Console.WriteLine("Please Enter a valid number");
+            }
+            
+
         }
     }
 }
